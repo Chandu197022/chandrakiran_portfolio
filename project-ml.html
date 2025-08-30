@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Electrolyte Anomaly Detection</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .project-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .project-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .project-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .project-layout {
+        grid-template-columns: 1fr;
+      }
+      .project-image {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body class="project-detail">
+  <header class="header">
+    <div class="brand">Electrolyte Anomaly Detection</div>
+    <nav class="nav">
+      <a href="projects.html">← Back to Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card fade-in project-layout">
+      
+      <!-- Left Side: Text -->
+      <div class="project-text">
+        <h1>Electrolyte Anomaly Detection using ECG Data</h1>
+        <p>
+          A machine learning–based system designed to detect electrolyte imbalances such as 
+          <strong>hyperkalemia</strong> and <strong>hypokalemia</strong> by analyzing ECG signals. 
+          The project combines biomedical signal processing with AI for early, non-invasive screening.
+        </p>
+
+        <h2>🔹 Objective</h2>
+        <ul>
+          <li>Develop a reliable diagnostic aid to detect potassium-related imbalances from ECGs.</li>
+          <li>Reduce dependency on invasive lab tests by enabling early, non-invasive screening.</li>
+          <li>Enhance accuracy using machine learning models with clinically relevant ECG features.</li>
+        </ul>
+
+        <h2>🔹 Data Collection & Preprocessing</h2>
+        <ul>
+          <li>Used open-source clinical ECG datasets containing annotated cases of electrolyte imbalances.</li>
+          <li>Applied <strong>bandpass filtering</strong> to remove baseline wander and high-frequency noise.</li>
+          <li>Detected R-peaks using Pan–Tompkins algorithm and segmented individual cardiac cycles.</li>
+          <li>Normalized signal amplitudes to maintain consistency across patients.</li>
+        </ul>
+
+        <h2>🔹 Feature Engineering</h2>
+        <ul>
+          <li>Extracted clinically significant features:
+            <ul>
+              <li>P-wave duration & PR interval</li>
+              <li>QRS complex width</li>
+              <li>T-wave morphology & amplitude</li>
+              <li>QT interval & RR variability</li>
+            </ul>
+          </li>
+          <li>Computed statistical descriptors (mean, variance, skewness, kurtosis).</li>
+          <li>Added frequency-domain features using FFT and wavelet transforms.</li>
+        </ul>
+
+        <h2>🔹 Modeling & Algorithms</h2>
+        <ul>
+          <li>Implemented and compared:
+            <ul>
+              <li><strong>Random Forest</strong> – best performance with feature importance ranking.</li>
+              <li><strong>Support Vector Machine (SVM)</strong> – high precision for minority class detection.</li>
+              <li><strong>Logistic Regression</strong> – baseline model for interpretability.</li>
+            </ul>
+          </li>
+          <li>Also tested rule-based ECG interval checks as a lightweight fallback method.</li>
+        </ul>
+
+        <h2>🔹 Evaluation Strategy</h2>
+        <ul>
+          <li>Metrics: Precision, Recall, F1-score, ROC-AUC.</li>
+          <li>Applied <strong>k-fold cross-validation</strong> to avoid overfitting.</li>
+          <li>Analyzed confusion matrix to measure class-specific performance.</li>
+          <li>Validated across patient subgroups to ensure robustness.</li>
+        </ul>
+
+        <h2>🔹 Results & Impact</h2>
+        <ul>
+          <li>Achieved high accuracy (>90%) in detecting potassium-related anomalies.</li>
+          <li>Demonstrated improved recall for hyperkalemia detection compared to standard thresholds.</li>
+          <li>Provided explainability through feature importance ranking (e.g., QT interval sensitivity).</li>
+          <li>Potential use as a screening tool in telemedicine and wearable health devices.</li>
+        </ul>
+
+        <h2>🔹 Challenges Faced</h2>
+        <ul>
+          <li>Noise handling in real-world ECG signals.</li>
+          <li>Class imbalance between normal and anomaly cases.</li>
+          <li>Generalizing models across diverse patient datasets.</li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Image -->
+      <div class="project-image">
+        <img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-54049-3_7/MediaObjects/602297_1_En_7_Fig7_HTML.png">
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Chandrakiran Rongali
+  </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solar Plant Data Logger</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .project-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .project-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .project-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .project-layout {
+        grid-template-columns: 1fr;
+      }
+      .project-image {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body class="project-detail">
+  <header class="header">
+    <div class="brand">Solar Plant Data Logger</div>
+    <nav class="nav">
+      <a href="projects.html">← Back to Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card fade-in project-layout">
+      
+      <!-- Left Side: Text -->
+      <div class="project-text">
+        <h1>Solar Plant Data Logger</h1>
+        <p>
+          A custom-built embedded system designed to collect, store, and transmit solar plant 
+          performance metrics for reliable monitoring and analysis.
+        </p>
+
+        <h2>🔹 Objective</h2>
+        <ul>
+          <li>Develop a resilient logger to capture inverter and environmental sensor data.</li>
+          <li>Ensure reliable daily yield and KPI reporting for O&M teams.</li>
+          <li>Enable quick fault diagnosis through visualization and trend analysis.</li>
+        </ul>
+
+        <h2>🔹 Hardware Setup</h2>
+        <ul>
+          <li><strong>ESP32 / Arduino</strong> – Microcontroller for sensor interfacing and data logging.</li>
+          <li><strong>SD Card Module</strong> – For buffered storage during network downtime.</li>
+          <li><strong>Real-Time Clock (RTC)</strong> – Provides accurate timestamps (with NTP sync fallback).</li>
+          <li><strong>Irradiance & Temperature Sensors</strong> – Capture plant environmental conditions.</li>
+        </ul>
+
+        <h2>🔹 Software Workflow</h2>
+        <ul>
+          <li>Sensor readings stored locally on SD card with daily file rotation.</li>
+          <li>Timestamps synchronized using <strong>NTP protocol</strong>.</li>
+          <li>Batch uploads to server when network connection is available.</li>
+          <li>CSV parsing scripts generate daily reports (PR, CUF, efficiency).</li>
+        </ul>
+
+        <h2>🔹 Challenges Faced</h2>
+        <ul>
+          <li>Preventing data corruption from sudden power loss.</li>
+          <li>Managing clock drift in offline mode.</li>
+          <li>Ensuring smooth recovery after power cycles.</li>
+        </ul>
+
+        <h2>🔹 Results & Impact</h2>
+        <ul>
+          <li>Successfully deployed as a field-ready prototype for solar plants.</li>
+          <li>Improved reliability in daily reporting compared to manual data entry.</li>
+          <li>Provided actionable insights for predictive maintenance.</li>
+          <li>Documented calibration steps and generated sample dashboards.</li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Image -->
+      <div class="project-image">
+        <img src="https://5.imimg.com/data5/NH/TM/MY-13221217/solar-data-logger.jpg">
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Chandrakiran Rongali
+  </footer>
+</body>
+</html>

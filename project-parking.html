@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Parking System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .project-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      align-items: center; /* Vertically centers image with text */
+    }
+    .project-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .project-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .project-layout {
+        grid-template-columns: 1fr;
+      }
+      .project-image {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body class="project-detail">
+  <header class="header">
+    <div class="brand">Smart Parking System</div>
+    <nav class="nav">
+      <a href="projects.html">← Back to Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card fade-in project-layout">
+      
+      <!-- Left Side: Text -->
+      <div class="project-text">
+        <h1>Smart Parking System (IoT Project)</h1>
+        <p>
+          A real-time parking occupancy detection system designed to minimize manual monitoring 
+          and provide accurate insights into parking availability.
+        </p>
+
+        <h2>🔹 Objective</h2>
+        <ul>
+          <li>Develop a low-cost and scalable parking solution for small to medium-sized lots.</li>
+          <li>Enable real-time monitoring with alerts for full or near-capacity status.</li>
+        </ul>
+
+        <h2>🔹 Hardware Setup</h2>
+        <ul>
+          <li><strong>ESP32 Microcontroller</strong> – Central control unit for sensor data processing.</li>
+          <li><strong>Ultrasonic Sensors (HC-SR04)</strong> – Detects vehicle presence in each slot.</li>
+          <li><strong>Power Supply</strong> – Stable 5V/12V power input with regulation.</li>
+          <li><strong>Status LEDs (optional)</strong> – Visual indicator for slot availability.</li>
+        </ul>
+
+        <h2>🔹 Software Workflow</h2>
+        <ul>
+          <li>ESP32 polls ultrasonic sensors and processes raw distance data.</li>
+          <li>Debouncing logic applied to avoid false detection from noisy readings.</li>
+          <li>Data is transmitted to a cloud/server via <strong>MQTT/HTTP</strong> protocols.</li>
+          <li>Occupancy data stored and visualized through a simple dashboard.</li>
+        </ul>
+
+        <h2>🔹 Dashboard Features</h2>
+        <ul>
+          <li>Real-time parking slot visualization.</li>
+          <li>Displays last-seen timestamps of each slot.</li>
+          <li>Sends alerts when the parking lot reaches full capacity.</li>
+          <li>Built using <strong>Vanilla JavaScript + JSON API</strong>.</li>
+        </ul>
+
+        <h2>🔹 Challenges Faced</h2>
+        <ul>
+          <li>Filtering out noise and unstable sensor readings.</li>
+          <li>Preventing double-counting when vehicles stop midway.</li>
+          <li>Ensuring reliable data transmission in unstable networks.</li>
+        </ul>
+
+        <h2>🔹 Results & Impact</h2>
+        <ul>
+          <li>Successfully tested with multiple vehicles under real conditions.</li>
+          <li>Accurate and reliable occupancy detection with minimal errors.</li>
+          <li>Reduced the need for manual monitoring by security staff.</li>
+          <li>Provided real-time data insights for better parking management.</li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Image (Middle aligned) -->
+      <div class="project-image">
+        <img src="https://www.mdpi.com/sensors/sensors-20-01476/article_deploy/html/images/sensors-20-01476-g001-550.jpg" 
+             alt="Smart Parking System Architecture">
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Chandrakiran Rongali
+  </footer>
+</body>
+</html>

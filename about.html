@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Chandrakiran Rongali</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body.about-page {
+      background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&auto=format&fit=crop&q=80") 
+        no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    .about-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease-in;
+    }
+    .about-card h1, .about-card h2 {
+      color: #38bdf8;
+    }
+    .about-profile {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about-profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+    }
+    .about-profile p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .button {
+      display: inline-block;
+      background: #38bdf8;
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #0ea5e9;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="about-page">
+  <div class="overlay">
+    <header class="header">
+      <div class="brand">About Me</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="about-card">
+        <div class="about-profile">
+          <img src="assets/images/profile.jpg" alt="profile">
+          <div>
+            <h1>Chandrakiran Rongali</h1>
+            <p>
+              I am an Electronics & Communication Engineering (ECE) graduate from GITAM University.  
+              I began my career as a Trainee Engineer at Greentek Solar, where I worked on data logging, site evaluations, and system installations.  
+            </p>
+            <p>
+              Over time, I discovered my interest in the software field, especially Data Science and Web Development.  
+              I enjoy building projects that connect hardware with software and transforming real-world data into meaningful insights.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="button" href="projects.html">See My Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h2>Education & Certifications</h2>
+        <p>
+          🎓 B.Tech in Electronics & Communication Engineering, GITAM University.  
+        </p>
+        <p>
+          📜 Completed internships & courses in IoT, Data Analytics, and Web Development.  
+          Constantly expanding skills to bridge the gap between engineering and software innovation.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">© 2025 Chandrakiran Rongali</footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

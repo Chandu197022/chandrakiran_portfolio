@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skills | Chandrakiran Rongali</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body.skills-page {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(15,23,42,0.85);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .brand {
+      font-size: 24px;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+    .nav a, .theme-toggle {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f1f5f9;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover { color: #38bdf8; }
+    .theme-toggle {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .theme-toggle:hover { background: #0ea5e9; }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+    p.small {
+      text-align: center;
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-bottom: 40px;
+    }
+
+    /* Skill Cards */
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+    }
+    .skill-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .skill-row img {
+      width: 64px;
+      height: 64px;
+    }
+    .card h2 {
+      margin: 0;
+      color: #f1f5f9;
+      font-size: 22px;
+    }
+    .card-link {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .card-link:hover { text-decoration: underline; }
+    .card p {
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 22px;
+      background: rgba(15,23,42,0.95);
+      font-size: 14px;
+      color: #94a3b8;
+      margin-top: 40px;
+      border-top: 1px solid rgba(56,189,248,0.3);
+    }
+  </style>
+</head>
+<body class="skills-page">
+<header class="header">
+  <div class="brand">Skills</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- IoT -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="IoT icon">
+      <div>
+        <h2><a class="card-link" href="skill-iot.html">Internet of Things (IoT)</a></h2>
+        <p>Hands-on with ESP32, sensors, and MQTT. Built Smart Parking and Energy Monitoring systems integrating hardware and cloud dashboards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VLSI -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721299.png" alt="VLSI icon">
+      <div>
+        <h2><a class="card-link" href="skill-vlsi.html">VLSI Design</a></h2>
+        <p>Knowledge in digital design, Verilog, and simulation tools. Familiar with FPGA prototyping and RTL verification workflows.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Science -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Data icon">
+      <div>
+        <h2><a class="card-link" href="skill-data.html">Data Science & Analytics</a></h2>
+        <p>Proficient in Python (pandas, NumPy, matplotlib), SQL, and dashboarding. Experienced with real-world datasets, outlier handling, and visualization for decision-making.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Web Development -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Web icon">
+      <div>
+        <h2><a class="card-link" href="skill-web.html">Web Development</a></h2>
+        <p>Developed responsive and accessible websites using HTML, CSS, and JavaScript. This portfolio itself is an example of clean UI/UX and performance-optimized design.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Python -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python icon">
+      <div>
+        <h2><a class="card-link" href="skill-python.html">Python Programming</a></h2>
+        <p>Comfortable with scripting, automation, data manipulation, and problem-solving. Applied Python for analytics, IoT data pipelines, and ML prototypes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded Systems -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Embedded icon">
+      <div>
+        <h2><a class="card-link" href="skill-embedded.html">Embedded Systems</a></h2>
+        <p>Worked on data loggers, UART bridges, and watchdog-driven firmware. Focused on stability, ADC calibration, and defensive coding practices.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solar PV -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/1483/1483285.png" alt="Solar icon">
+      <div>
+        <h2><a class="card-link" href="skill-solar.html">Solar PV Systems</a></h2>
+        <p>Experience in solar site surveys, string design, inverter selection, and performance monitoring. Worked on evaluation, installation, and O&M basics.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Git & Version Control -->
+  <div class="card">
+    <div class="skill-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="Git icon">
+      <div>
+        <h2><a class="card-link" href="skill-git.html">Version Control (Git/GitHub)</a></h2>
+        <p>Proficient in Git workflows for team collaboration. Experienced with branching, pull requests, and maintaining projects on GitHub.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">© 2025 Chandrakiran Rongali</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
